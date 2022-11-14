@@ -1,4 +1,5 @@
 import Head from "next/head";
+import AboutUs from "./components/aboutus";
 import Masthead from "./components/masthead";
 import styles from "../styles/Home.module.css";
 
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
 
       <Masthead />
+      <AboutUs />
     </div>
   );
 }
