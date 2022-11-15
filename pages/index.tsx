@@ -14,6 +14,8 @@ export default function Home() {
       <Masthead />
       <AboutUs />
       <Skills />
+      <Skills />
+      <Skills />
     </div>
   );
 }
