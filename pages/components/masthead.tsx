@@ -4,6 +4,7 @@ import { ScrollContext } from "@utils/scroll-observer";
 import Logo from "@assets/logo.png";
 import DownArrow from "@assets/down-arrow.png";
 import BgImage from "@assets/bg-img.jpg";
+/* import BgVideo from "@assets/bg-video.mp4"; */
 
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -29,6 +30,15 @@ const Masthead: React.FC = () => {
         transform: `translateY(-${progress * 20}vh)`,
       }}
     >
+      {/* <video */}
+      {/*   autoPlay */}
+      {/*   loop */}
+      {/*   muted */}
+      {/*   playsInline */}
+      {/*   className="absolute w-full h-full object-cover" */}
+      {/* > */}
+      {/*   <source src={BgVideo} type="video/mp4" /> */}
+      {/* </video> */}
       <Image
         src={BgImage}
         width={500}
@@ -39,8 +49,8 @@ const Masthead: React.FC = () => {
       <div className={`flex-grow-0 pt-10 transition-opacity duration-1000 z-0`}>
         <Image
           src={Logo}
-          width={288 / 3}
-          height={114 / 3}
+          width={488 / 3}
+          height={214 / 3}
           alt="logo"
           priority
         />
