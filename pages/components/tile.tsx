@@ -31,6 +31,7 @@ export const TileWraper: React.FC<WrapperProps> = ({
 }) => {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
+  /* console.log(refContainer); */
 
   let currentPage = 0;
 
@@ -49,7 +50,11 @@ export const TileWraper: React.FC<WrapperProps> = ({
 
   return (
     <TileContext.Provider value={{ numOfPages, currentPage }}>
-      <div ref={refContainer} className="relateve bg-black text-white">
+      <div
+        ref={refContainer}
+        className="relative bg-black text-white"
+        style={{ height: numOfPages * 100 + "vh" }}
+      >
         {children}
       </div>
     </TileContext.Provider>
@@ -66,7 +71,10 @@ export const TileContent: React.FC<Children> = ({ children }) => (
 
 export const Tile: React.FC<Props> = ({ page, renderContent }) => {
   const { currentPage, numOfPages } = useContext(TileContext);
+  /* console.log(currentPage); */
+  /* console.log(numOfPages); */
   const progress = Math.max(0, currentPage - page);
+  /* console.log(progress); */
 
   let opacity = Math.min(1, Math.max(0, progress * 4));
   if (progress > 0.85 && page < numOfPages - 1) {

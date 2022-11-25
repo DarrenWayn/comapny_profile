@@ -16,6 +16,7 @@ export default function Home() {
       <AboutUs />
       <Skills />
       <Works />
+      <AboutUs />
     </div>
   );
 }
