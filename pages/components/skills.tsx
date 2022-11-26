@@ -12,7 +12,7 @@ const Skills: React.FC = () => {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
 
-  const numOfPages = 3;
+  const numOfpages = 3;
   let progress = 0;
 
   const { current: elContainer } = refContainer;
@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
         clientHeight + halfH,
         Math.max(-screenH, scrollY - offsetTop) + halfH
       ) / clientHeight;
-    progress = Math.min(numOfPages - 0.5, Math.max(0.5, percentY * numOfPages));
+    progress = Math.min(numOfpages - 0.5, Math.max(0.5, percentY * numOfpages));
   }
 
   return (

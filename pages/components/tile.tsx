@@ -11,29 +11,29 @@ interface Props {
 }
 
 interface WrapperProps {
-  numOfPages: number;
+  numOfpages: number;
   children: React.ReactNode;
 }
 
 interface TileContextValue {
-  numOfPages: number;
-  currentPage: number;
+  numOfpages: number;
+  currentpage: number;
 }
 
 export const TileContext = React.createContext<TileContextValue>({
-  numOfPages: 0,
-  currentPage: 0,
+  numOfpages: 0,
+  currentpage: 0,
 });
 
 export const TileWraper: React.FC<WrapperProps> = ({
   children,
-  numOfPages,
+  numOfpages,
 }) => {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
   /* console.log(refContainer); */
 
-  let currentPage = 0;
+  let currentpage = 0;
 
   const { current: elContainer } = refContainer;
   if (elContainer) {
@@ -45,15 +45,15 @@ export const TileWraper: React.FC<WrapperProps> = ({
         clientHeight + halfH,
         Math.max(-screenH, scrollY - offsetTop) + halfH
       ) / clientHeight;
-    currentPage = percentY * numOfPages;
+    currentpage = percentY * numOfpages;
   }
 
   return (
-    <TileContext.Provider value={{ numOfPages, currentPage }}>
+    <TileContext.Provider value={{ numOfpages, currentpage }}>
       <div
         ref={refContainer}
         className="relative bg-black text-white"
-        style={{ height: numOfPages * 100 + "vh" }}
+        style={{ height: numOfpages * 100 + "vh" }}
       >
         {children}
       </div>
@@ -70,14 +70,14 @@ export const TileContent: React.FC<Children> = ({ children }) => (
 );
 
 export const Tile: React.FC<Props> = ({ page, renderContent }) => {
-  const { currentPage, numOfPages } = useContext(TileContext);
-  /* console.log(currentPage); */
-  /* console.log(numOfPages); */
-  const progress = Math.max(0, currentPage - page);
+  const { currentpage, numOfpages } = useContext(TileContext);
+  /* console.log(currentpage); */
+  /* console.log(numOfpages); */
+  const progress = Math.max(0, currentpage - page);
   /* console.log(progress); */
 
   let opacity = Math.min(1, Math.max(0, progress * 4));
-  if (progress > 0.85 && page < numOfPages - 1) {
+  if (progress > 0.85 && page < numOfpages - 1) {
     opacity = Math.min(0, Math.max(1.0, progress * 4));
   }
 

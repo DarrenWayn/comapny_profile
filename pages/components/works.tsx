@@ -1,14 +1,14 @@
 import React from "react";
 import { Tile, TileBackground, TileContent, TileWraper } from "./tile";
 import { WorkBackground, WorkContainer, WorkLeft, WorkRight } from "./work";
-import Image from "next/image";
 
+import Image from "next/image";
 import BankingFirst from "@assets/bankingfirst.png";
 import BankingSecond from "@assets/bankingsecond.png";
 import BankingThird from "@assets/bankingthird.png";
 
 const Works = () => (
-  <TileWraper numOfPages={3}>
+  <TileWraper numOfpages={3}>
     <TileBackground>
       <WorkBackground />
     </TileBackground>
@@ -51,7 +51,6 @@ const Works = () => (
             <WorkRight progress={progress}>
               <Image
                 src={BankingSecond}
-                layout="responsive"
                 width={840}
                 height={1620}
                 alt="banking welcome app"
