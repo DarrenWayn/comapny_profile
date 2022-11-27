@@ -1,5 +1,5 @@
 import React from "react";
-/* import Link from "next/link"; */
+import Link from "next/link";
 
 /* type WorkProps = { */
 /*   children: React.ReactNode; */
@@ -14,7 +14,7 @@ export const WorkContainer: React.FC<{ children: React.ReactNode }> = ({
 );
 
 export const WorkBackground: React.FC = () => (
-  <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
+  <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen top-0 sticky">
     <div className="bg-black h-[30vh] lg:h-auto"></div>
     <div className="bg-white h-[70vh] lg:min-h-screen"></div>
   </div>
@@ -51,3 +51,19 @@ export const WorkRight: React.FC<{
     </div>
   );
 };
+
+interface LinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
+  <Link
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    className="underline underline-offset-8 decoration-1"
+  >
+    {children}
+  </Link>
+);
