@@ -38,6 +38,7 @@ const Works = () => (
                 width={840}
                 height={1620}
                 alt="banking welcome app"
+                className="w-auto h-auto"
               />
             </WorkRight>
             {/* <span className="text-9xl">Foo {progress}</span> */}
@@ -61,6 +62,7 @@ const Works = () => (
                 width={840}
                 height={1620}
                 alt="banking welcome app"
+                className="w-auto h-auto"
               />
             </WorkRight>
             {/* <span className="text-9xl">Foo {progress}</span> */}
@@ -84,6 +86,7 @@ const Works = () => (
                 width={840}
                 height={1620}
                 alt="banking welcome app"
+                className="w-auto h-auto"
               />
             </WorkRight>
             {/* <span className="text-9xl">Foo {progress}</span> */}

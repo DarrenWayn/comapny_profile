@@ -3,6 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["robohash.org"],
+    domains: ["robohash.org", "placeimg.com"],
   },
 };
