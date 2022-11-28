@@ -78,6 +78,16 @@ const ClientLogos = () => {
             unoptimized
           />
         </SliderItem>
+        <SliderItem width={150}>
+          <Image
+            src={logos}
+            width={150}
+            height={50}
+            alt="darren"
+            objectFit="contain"
+            unoptimized
+          />
+        </SliderItem>
       </SliderContainer>
     </>
   );

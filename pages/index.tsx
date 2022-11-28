@@ -2,6 +2,7 @@ import Head from "next/head";
 import AboutUs from "./components/aboutus";
 import Masthead from "./components/masthead";
 import Skills from "./components/skills";
+import Testimonials from "./components/testimonials";
 import TrustedBy from "./components/trustedby";
 import Works from "./components/works";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Skills />
       <Works />
       <TrustedBy />
+      <Testimonials />
     </div>
   );
 }

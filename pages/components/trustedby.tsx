@@ -17,7 +17,6 @@ const TrustedBy: React.FC = () => (
         process
       </h3>
     </div>
-    <div>Testimonials</div>
     <div className="flex-1 bg-black"></div>
   </section>
 );
