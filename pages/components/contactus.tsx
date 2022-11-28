@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "@assets/down-arrow.png";
+import WhiteLogo from "@assets/white-logo.png";
 
 const ContactUs: React.FC = () => {
   return (
     <div className="bg-black text-white flex flex-col justify-center items-center pt-10 min-h-screen">
-      <div className="flex-1 flex flex-col justify-center pt-10 lg:pt-6">
+      <div className="flex-1 flex flex-col justify-center items-center pt-10 lg:pt-6">
         <div className="pb-10">
           <Image
-            src={Logo}
+            src={WhiteLogo}
             width={120}
             height={100}
             alt="this is a test logo"
