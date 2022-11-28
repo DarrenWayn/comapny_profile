@@ -1,5 +1,6 @@
 import { SizeContext } from "@utils/size-observer";
-import React, { useContext, useRef } from "react";
+import useAnimationFrame from "@utils/use-animation-frame";
+import React, { useCallback, useContext, useRef } from "react";
 
 interface Props {
   initialOffsetX: number;
@@ -21,6 +22,22 @@ const SliderContainer: React.FC<Props> = ({
 
   const enabled = innerWidth < contentWidth;
 
+  useAnimationFrame(
+    enabled,
+    useCallback(() => {
+      const { current: elContainer } = refContainer;
+      const { current: elContent } = refContent;
+      if (elContainer && elContent) {
+        refScrollX.current += 0.5;
+        elContainer.scrollLeft = refScrollX.current;
+        if (elContainer.scrollLeft >= elContent.clientWidth) {
+          refScrollX.current = 0;
+          elContainer.scrollLeft = 0;
+        }
+      }
+    }, [])
+  );
+
   return (
     <div
       ref={refContainer}
@@ -29,6 +46,7 @@ const SliderContainer: React.FC<Props> = ({
       <div ref={refContent} className="inline-block">
         {children}
       </div>
+      <div className={enabled ? "inline" : "hidden"}>{children}</div>
     </div>
   );
 };
