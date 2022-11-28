@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutUs from "./components/aboutus";
+import ContactUs from "./components/contactus";
 import Masthead from "./components/masthead";
 import Skills from "./components/skills";
 import Testimonials from "./components/testimonials";
@@ -20,6 +21,7 @@ export default function Home() {
       <Works />
       <TrustedBy />
       <Testimonials />
+      <ContactUs />
     </div>
   );
 }
