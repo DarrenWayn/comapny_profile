@@ -53,6 +53,30 @@ const AboutUs: React.FC = () => {
             socialId="@marco"
             link="https://github.com/marco/"
           />
+          <Member
+            id="7"
+            name="marco"
+            socialId="@marco"
+            link="https://github.com/marco/"
+          />
+          <Member
+            id="8"
+            name="marco"
+            socialId="@marco"
+            link="https://github.com/marco/"
+          />
+          <Member
+            id="9"
+            name="marco"
+            socialId="@marco"
+            link="https://github.com/marco/"
+          />
+          <Member
+            id="10"
+            name="marco"
+            socialId="@marco"
+            link="https://github.com/marco/"
+          />
         </div>
       </div>
     </section>
