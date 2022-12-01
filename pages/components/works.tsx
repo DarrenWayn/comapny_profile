@@ -1,5 +1,5 @@
 import React from "react";
-import TileBackground, { Tile, TileContent, TileWraper } from "./tile";
+import TileWraper, { Tile, TileBackground, TileContent } from "./tile";
 import WorkContainer, {
   WorkBackground,
   WorkLeft,

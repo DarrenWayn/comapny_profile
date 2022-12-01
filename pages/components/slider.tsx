@@ -43,7 +43,7 @@ const SliderContainer: React.FC<Props> = ({
       ref={refContainer}
       className={`slider-container overflow-x-hidden whitespace-nowrap max-w-full pointer-events-none ${className}`}
     >
-      <div ref={refContent} className="inline-block">
+      <div ref={refContent} className="">
         {children}
       </div>
       <div className={enabled ? "inline" : "hidden"}>{children}</div>

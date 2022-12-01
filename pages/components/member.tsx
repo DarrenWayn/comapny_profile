@@ -23,7 +23,7 @@ const Member = ({ id, name, socialId, link }: Props) => {
       />
       <div className="text-2xl xl:text-3xl">{name}</div>
       <div className="text-xl">
-        <Link href={link}>{socialId}</Link>
+        <Link href={link ?? ""}>{socialId}</Link>
       </div>
     </div>
   );

@@ -21,10 +21,7 @@ export const TileContext = React.createContext<TileContextValue>({
   currentPage: 0,
 });
 
-export const TileWraper: React.FC<WrapperProps> = ({
-  children,
-  numOfPages,
-}) => {
+const TileWraper: React.FC<WrapperProps> = ({ children, numOfPages }) => {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
 
@@ -41,7 +38,6 @@ export const TileWraper: React.FC<WrapperProps> = ({
         Math.max(-screenH, scrollY - offsetTop) + halfH
       ) / clientHeight;
     currentPage = percentY * numOfPages;
-    console.log(currentPage);
   }
 
   return (
@@ -57,7 +53,9 @@ export const TileWraper: React.FC<WrapperProps> = ({
   );
 };
 
-const TileBackground: React.FC<{ children: React.ReactNode }> = ({
+export default TileWraper;
+
+export const TileBackground: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => <div className="absolute h-full w-full">{children}</div>;
 
@@ -86,5 +84,3 @@ export const Tile: React.FC<Props> = ({ page, renderContent }) => {
     </div>
   );
 };
-
-export default TileBackground;
