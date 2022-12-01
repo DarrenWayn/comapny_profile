@@ -57,7 +57,7 @@ export const TileWraper: React.FC<WrapperProps> = ({
   );
 };
 
-export const TileBackground: React.FC<{ children: React.ReactNode }> = ({
+const TileBackground: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => <div className="absolute h-full w-full">{children}</div>;
 
@@ -86,3 +86,5 @@ export const Tile: React.FC<Props> = ({ page, renderContent }) => {
     </div>
   );
 };
+
+export default TileBackground;

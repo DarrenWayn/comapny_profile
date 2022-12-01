@@ -5,7 +5,7 @@ import Link from "next/link";
 /*   children: React.ReactNode; */
 /* }; */
 
-export const WorkContainer: React.FC<{ children: React.ReactNode }> = ({
+const WorkContainer: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-sceen">
@@ -67,3 +67,5 @@ export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
     {children}
   </Link>
 );
+
+export default WorkContainer;
