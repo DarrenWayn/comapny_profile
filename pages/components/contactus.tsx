@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { EventHandler, useCallback, useState } from "react";
 import Image from "next/image";
 import WhiteLogo from "@assets/white-logo.png";
 import axios from "axios";
@@ -16,7 +16,7 @@ const ContactUs: React.FC = () => {
     message: "",
   });
 
-  const handleOnChange = useCallback((e) => {
+  const handleOnChange = useCallback((e: any) => {
     e.persist();
     setInputs((prev) => ({
       ...prev,
@@ -51,7 +51,7 @@ const ContactUs: React.FC = () => {
   }, []);
 
   const handleSubmit = useCallback(
-    (e) => {
+    (e: any) => {
       e.preventDefault();
       setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
       axios({

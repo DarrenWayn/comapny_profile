@@ -41,6 +41,7 @@ export const TileWraper: React.FC<WrapperProps> = ({
         Math.max(-screenH, scrollY - offsetTop) + halfH
       ) / clientHeight;
     currentPage = percentY * numOfPages;
+    console.log(currentPage);
   }
 
   return (
@@ -65,7 +66,7 @@ export const TileContent: React.FC<{ children: React.ReactNode }> = ({
 }) => <div className="sticky top-0 h-screen overflow-hidden">{children}</div>;
 
 export const Tile: React.FC<Props> = ({ page, renderContent }) => {
-  const { currentPage, numOfPages: numOfPages } = useContext(TileContext);
+  const { currentPage, numOfPages } = useContext(TileContext);
   const progress = Math.max(0, currentPage - page);
 
   let opacity = Math.min(1, Math.max(0, progress * 4));
