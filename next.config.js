@@ -8,3 +8,5 @@ const nextConfig = {
     domains: ["robohash.org", "placeimg.com"],
   },
 };
+
+export default nextConfig;
