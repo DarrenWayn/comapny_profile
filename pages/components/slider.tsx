@@ -1,5 +1,5 @@
 import { SizeContext } from "@utils/size-observer";
-import useAnimationFrame from "@utils/use-animation-frame";
+import useAnimationFrame from "@hooks/use-animation-frame";
 import React, { useCallback, useContext, useRef } from "react";
 
 interface Props {

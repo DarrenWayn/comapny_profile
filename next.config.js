@@ -6,3 +6,5 @@ const nextConfig = {
     domains: ["robohash.org", "placeimg.com"],
   },
 };
+
+module.exports(nextConfig);
