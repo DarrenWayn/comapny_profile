@@ -5,5 +5,9 @@ const nextConfig = {
   images: {
     domains: ["robohash.org", "placeimg.com"],
   },
+};
+
+module.exports = {
+  nextConfig,
   pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
 };

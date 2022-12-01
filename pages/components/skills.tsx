@@ -49,7 +49,7 @@ const Skills: React.FC = () => {
             className={`${s.skillText} inline-block after:content-['_']`}
             style={{ opacity: opacityForBlock(progress, 2) }}
           >
-            We're maintaining some of the biggest test company since 2015.
+            We are maintaining some of the biggest test company since 2015.
           </span>
         </div>
       </div>
