@@ -72,6 +72,38 @@ const ClientLogos = () => {
         <SliderItem width={150}>
           <Image src={Logos} width={150} height={50} alt="darren" />
         </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
+
+        <SliderItem width={150}>
+          <Image src={Logos} width={150} height={50} alt="darren" />
+        </SliderItem>
       </SliderContainer>
     </>
   );

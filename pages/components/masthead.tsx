@@ -10,6 +10,7 @@ import FollowImage from "./follow-image";
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const refContainer = useRef<HTMLDivElement>(null);
+  /* console.log(refContainer); */
   const { scrollY } = useContext(ScrollContext);
 
   let progress = 0;

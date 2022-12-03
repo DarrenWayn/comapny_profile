@@ -21,12 +21,16 @@ const SliderContainer: React.FC<Props> = ({
   const refContent = useRef<HTMLDivElement>(null);
 
   const enabled = innerWidth < contentWidth;
+  /* console.log(refScrollX); */
+  /* console.log(refContainer); */
+  console.log(refContent);
 
   useAnimationFrame(
     enabled,
     useCallback(() => {
       const { current: elContainer } = refContainer;
       const { current: elContent } = refContent;
+
       if (elContainer && elContent) {
         refScrollX.current += 0.5;
         elContainer.scrollLeft = refScrollX.current;
