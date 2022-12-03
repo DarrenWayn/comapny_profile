@@ -34,10 +34,9 @@ const Works = () => (
               <Image
                 src={BankingFirst}
                 /* layout="responsive" */
-                width={840}
-                height={1620}
+                width={460}
+                height={520}
                 alt="banking welcome app"
-                className="w-auto h-auto"
               />
             </WorkRight>
             {/* <span className="text-9xl">Foo {progress}</span> */}
@@ -58,10 +57,9 @@ const Works = () => (
               <Image
                 src={BankingSecond}
                 /* layout="responsive" */
-                width={840}
-                height={1620}
+                width={460}
+                height={520}
                 alt="banking welcome app"
-                className="w-auto h-auto"
               />
             </WorkRight>
             {/* <span className="text-9xl">Foo {progress}</span> */}
@@ -82,10 +80,9 @@ const Works = () => (
               <Image
                 src={BankingThird}
                 /* layout="responsive" */
-                width={840}
-                height={1620}
+                width={460}
+                height={520}
                 alt="banking welcome app"
-                className="w-auto h-auto"
               />
             </WorkRight>
             {/* <span className="text-9xl">Foo {progress}</span> */}
