@@ -32,7 +32,7 @@ const SliderContainer: React.FC<Props> = ({
       const { current: elContent } = refContent;
 
       if (elContainer && elContent) {
-        refScrollX.current -= 0.5;
+        refScrollX.current += 0.5;
         elContainer.scrollLeft = refScrollX.current;
         if (elContainer.scrollLeft >= elContent.clientWidth) {
           refScrollX.current = 0;

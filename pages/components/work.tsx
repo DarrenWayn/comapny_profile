@@ -17,8 +17,8 @@ export default WorkContainer;
 
 export const WorkBackground: React.FC = () => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen top-0 sticky">
-    <div className="bg-black h-[30vh] lg:h-auto"></div>
-    <div className="bg-white h-[70vh] lg:min-h-screen"></div>
+    <div className="bg-black h-[25vh] lg:h-auto"></div>
+    <div className="bg-white h-[75vh] lg:min-h-screen"></div>
   </div>
 );
 
@@ -47,7 +47,7 @@ export const WorkRight: React.FC<{
   return (
     <div
       className="flex flex-1 lg:items-center justify-center h-screen"
-      style={{ transform: `translateY(${translateY}px)` }}
+      style={{ transform: `translateDown(${translateY}px)` }}
     >
       {children}
     </div>

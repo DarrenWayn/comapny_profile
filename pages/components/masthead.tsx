@@ -31,7 +31,7 @@ const Masthead: React.FC = () => {
       ref={refContainer}
       className="min-h-screen flex flex-col items-center justify-center sticky top-0 z-[-1]"
       style={{
-        transform: `translateY(-${progress * 20}vh)`,
+        transform: `translateDown(-${progress * 20}vh)`,
       }}
     >
       {/* <video */}
