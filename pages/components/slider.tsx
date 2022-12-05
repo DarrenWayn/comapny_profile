@@ -22,7 +22,7 @@ const SliderContainer: React.FC<Props> = ({
 
   const enabled = innerWidth < contentWidth;
   /* console.log(refScrollX); */
-  console.log(refContainer);
+  /* console.log(refContainer); */
   /* console.log(refContent); */
 
   useAnimationFrame(
@@ -47,10 +47,10 @@ const SliderContainer: React.FC<Props> = ({
       ref={refContainer}
       className={`slider-container overflow-x-hidden whitespace-nowrap max-w-full pointer-events-none ${className}`}
     >
-      <div ref={refContent} className="">
+      <div ref={refContent} className="inline-block">
         {children}
       </div>
-      <div className={enabled ? "inline" : "hidden"}>{children}</div>
+      <div className={enabled ? "inline-block" : "hidden"}>{children}</div>
     </div>
   );
 };

@@ -32,11 +32,30 @@ const TileWraper: React.FC<WrapperProps> = ({ children, numOfPages }) => {
     const { clientHeight, offsetTop } = elContainer;
     const screenH = window.innerHeight;
     const halfH = screenH / 2;
-    const percentY =
-      Math.min(
-        clientHeight + halfH,
-        Math.max(-screenH, scrollY - offsetTop) + halfH
-      ) / clientHeight;
+    const currentH = scrollY - offsetTop + halfH;
+    const percentY = currentH / clientHeight;
+    console.log(percentY);
+    /* console.group(); */
+    /* console.log("clientHeight", clientHeight); */
+    /* console.log("screenH", screenH); */
+    /* console.log("-screenH", -screenH); */
+    /* console.log("halfH", halfH); */
+    /* console.log("scrollY", scrollY); */
+    /* console.log("offsetTop", offsetTop); */
+    /* console.log("clientHeight + halfH =", clientHeight + halfH); */
+    /* console.log("scrollY - offsetTop =", scrollY - offsetTop); */
+    /* console.log("halfH / clientHeight =", halfH / clientHeight); */
+    /* console.log( */
+    /*   "-screenH, scrollY - offsetTop) + halfH / clientHeight =", */
+    /*   Math.min( */
+    /*     clientHeight + halfH, */
+    /*     Math.max(-screenH, scrollY - offsetTop) + halfH */
+    /*   ) / clientHeight */
+    /* ); */
+    /**/
+    /* console.log("numOfPages = ", numOfPages); */
+    /* console.log("currentPage = percentY * numOfPages", percentY * numOfPages); */
+    /* console.groupEnd(); */
     currentPage = percentY * numOfPages;
   }
 
